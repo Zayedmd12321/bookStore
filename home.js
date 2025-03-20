@@ -30,4 +30,17 @@
     const element = nav_item[i];
     element.style.animationDelay = (i<7)?`${(i+1)/10}s`:'1s';
   } 
+
+//Creating a dropdown in Categories
+document.getElementsByClassName('Categories')[0].addEventListener('click', function (e) {
+  e.preventDefault();
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  dropdownMenu.style.display = dropdownMenu.style.display === 'flex' ? 'none' : 'flex';
+});
+
+//Changing the Category types when clicked in the dropdown menu
+function changeCategory(event) {
+  let new_category = event.id;
+  document.getElementById('Categories').innerText = new_category;
+}
   
