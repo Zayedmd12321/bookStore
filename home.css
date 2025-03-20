@@ -4,6 +4,186 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    z-index: 1;
+    width: 100%;
+    height: 4.5rem;
+    top: 0;
+    left: 0;
+}
+
+/* Designing Nav Bar */
+#navbar {
+    display: flex;
+    height: 100%;
+    top: 0;
+}
+
+/* Inserting a background using ::before  */
+#navbar::before {
+    content: "";
+    background-color: #113955;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Utilities of navbar */
+#logo {
+    margin: 0.1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    height: 55px;
+    width: 58px;
+    margin: 5px 0px;
+    margin-right: 12px;
+}
+
+#logo span {
+    color: #fff;
+    font-weight: 600;
+}
+
+#Categories {
+    margin: 0;
+}
+
+.Categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#accnt {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#accnt a {
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+#accnt svg:hover {
+    transform: scale(1.4);
+}
+
+
+#link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bars,.close{
+    display: none;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #113955;
+    list-style: none;
+    /* padding: 10px 0; */
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    border-top: 2px solid #cfcfcf;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.item {
+    list-style: none;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0px 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+.item a:hover {
+    color: #669bbc;
+}
+
+/* Giving the effect of underlining */
+
+.item a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #70b1da;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+.item a:hover::after {
+    transform: scaleX(1);
+}
+
+/* animations */
+.fade-in {
+    animation: fade_in 0.5s linear forwards;
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* navbar ends  */
+
 .everything {
     display: grid;
     grid-template-columns: 1fr;
@@ -19,14 +199,6 @@
     gap: 5px;
 }
 
-.nav {
-    width: 100%;
-    height: 90px;
-    background-color: rgb(32, 250, 250);
-
-    position: sticky;
-    top: 0;
-}
 
 .welcome {
     width: 100%;
@@ -85,8 +257,66 @@
     background-color: rgb(59, 247, 247);
 }
 
+/* footer  */
 .footer {
-    width: 100%;
-    height: 150;
-    background-color: rgb(23, 243, 243);
+    background-color: #23282f;
+    color: rgb(196, 193, 193);
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: rgb(196, 193, 193);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media a {
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #9ca3af;
+}
+
+.footer-bottom {
+    border-top: 1px solid #6b7280;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
 }
