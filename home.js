@@ -43,4 +43,23 @@ function changeCategory(event) {
   let new_category = event.id;
   document.getElementById('Categories').innerText = new_category;
 }
-  
+
+const text = "PageNest";
+let index = 0;
+const speed = 200;
+
+function typeText() {
+    if (index < text.length) {
+        document.getElementById("type-writer").innerText += text.charAt(index);
+        index++;
+        setTimeout(typeText, speed);
+    } else {
+        setTimeout(() => {
+            document.getElementById("type-writer").innerText = "";
+            index = 0;
+            typeText();
+        }, 500);
+    }
+}
+
+typeText();  
