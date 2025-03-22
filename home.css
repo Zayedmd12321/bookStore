@@ -405,9 +405,10 @@ header {
 .bookCard .buttons {
     display: flex;
     gap: 8px;
+    margin-bottom: 5px
 }
 
-.bookCard .buttons button {
+.bookCard .buttons button, .bookCard button {
     background: white;
     color: black;
     border: none;
@@ -418,7 +419,7 @@ header {
     transition: all 0.3s;
 }
 
-.bookCard .buttons button:hover {
+.bookCard .buttons button:hover, .bookCard button:hover {
     background: gray;
     color: white;
 }
