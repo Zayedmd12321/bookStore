@@ -131,7 +131,7 @@ const horror = [
     "title": "Mexican Gothic",
     "author": "Silvia Moreno-Garcia",
     "about": "A chilling gothic horror novel set in a mysterious, decaying mansion in Mexico. The protagonist, a young socialite, is drawn into a dark and twisted mystery as she unravels the eerie history of the house. With elements of psychological horror, folklore, and haunting imagery, the novel explores themes of power, oppression, and resilience.",
-    "price": 599,
+    "price": "599",
     "image": "images/books/book30.jpeg",
     "category": "Horror"
   },
@@ -139,7 +139,7 @@ const horror = [
     "title": "The Only Good Indians",
     "author": "Stephen Graham Jones",
     "about": "A haunting tale of supernatural revenge and cultural identity. Four Native American men are stalked by a vengeful spirit from their past, leading them into a terrifying cycle of guilt and retribution. The novel blends horror with social commentary, examining the consequences of past actions and the struggle between tradition and modern life.",
-    "price": 649,
+    "price": "649",
     "image": "images/books/book31.jpeg",
     "category": "Horror"
   },
@@ -147,7 +147,7 @@ const horror = [
     "title": "House of Leaves",
     "author": "Mark Z. Danielewski",
     "about": "A mind-bending, terrifying exploration of a house that defies reality. Through multiple narratives and unconventional formatting, the book immerses readers in an eerie and unsettling experience. As a family moves into a seemingly ordinary home, they discover its impossible dimensions and the sinister presence lurking within. This postmodern horror novel redefines the genre with its unique storytelling techniques.",
-    "price": 799,
+    "price": "799",
     "image": "images/books/book32.jpeg",
     "category": "Horror"
   },
@@ -155,7 +155,7 @@ const horror = [
     "title": "The Silent Companions",
     "author": "Laura Purcell",
     "about": "A gothic ghost story filled with eerie dolls and unsettling mysteries. When a newly widowed woman moves into her late husband's estate, she discovers life-sized wooden figures that seem to move on their own. As supernatural occurrences intensify, she must confront the dark secrets of the house’s past. A chilling tale of isolation, fear, and the supernatural.",
-    "price": 549,
+    "price": "549",
     "image": "images/books/book33.jpeg",
     "category": "Horror"
   },
@@ -174,7 +174,7 @@ const science = [
     "title": "The Brilliant Abyss",
     "author": "Helen Scales",
     "about": "A captivating look at the wonders of the deep sea and its creatures. The book dives into the mysterious depths of the ocean, revealing an unknown world filled with bizarre and fascinating life forms. It also discusses the critical role oceans play in Earth's climate and ecology, making it an eye-opening read for nature lovers and environmentalists.",
-    "price": 649,
+    "price": "649",
     "image": "images/books/book29.jpeg",
     "category": "Science"
   },
@@ -190,7 +190,7 @@ const science = [
     "title": "The Order of Time",
     "author": "Carlo Rovelli",
     "about": "A mind-bending exploration of time and its mysteries in physics. Rovelli challenges conventional notions of time, weaving together concepts from quantum physics, thermodynamics, and relativity. The book is both a scientific and philosophical journey, making complex ideas accessible to a general audience while questioning the very fabric of our reality.",
-    "price": 599,
+    "price": "599",
     "image": "images/books/book26.jpg",
     "category": "Science"
   },
@@ -198,7 +198,7 @@ const science = [
     "title": "Otherlands: A Journey Through Earth's Extinct Worlds",
     "author": "Thomas Halliday",
     "about": "A mesmerizing journey into prehistoric landscapes and lost worlds. Through vivid storytelling and cutting-edge science, Halliday transports readers to various epochs of Earth's history, revealing the incredible biodiversity of the past. The book connects ancient extinction events to modern environmental issues, offering profound insights into the planet's future.",
-    "price": 699,
+    "price": "699",
     "image": "images/books/book27.jpeg",
     "category": "Science"
   },
@@ -206,7 +206,7 @@ const science = [
     "title": "The Hidden Reality",
     "author": "Brian Greene",
     "about": "An intriguing dive into parallel universes and the multiverse theory. Greene explores the possibility that our universe is just one of many, drawing from quantum mechanics and string theory. The book presents cutting-edge scientific theories in an engaging and thought-provoking manner, making it a must-read for those fascinated by the mysteries of the cosmos.",
-    "price": 799,
+    "price": "799",
     "image": "images/books/book28.jpeg",
     "category": "Science"
   },
@@ -233,7 +233,7 @@ const nonfiction = [
     "title": "The Book of Delights",
     "author": "Ross Gay",
     "about": "A collection of lyrical essays celebrating the small joys in life. Each essay reflects on everyday experiences, finding beauty and meaning in simple moments. Through his observations, Gay offers a fresh perspective on gratitude, mindfulness, and the power of delight in shaping our lives. A deeply personal and uplifting read that inspires appreciation for the little things.",
-    "price": 499,
+    "price": "499",
     "image": "images/books/book22.jpg",
     "category": "Nonfiction"
   },
@@ -241,7 +241,7 @@ const nonfiction = [
     "title": "The Soul of an Octopus",
     "author": "Sy Montgomery",
     "about": "A fascinating journey into the intelligence and mystery of octopuses. Montgomery explores the emotional and cognitive depth of these extraordinary creatures, sharing personal encounters and scientific discoveries. Through her experiences, she challenges traditional notions of animal intelligence and consciousness, revealing the surprising ways octopuses interact with humans.",
-    "price": 599,
+    "price": "599",
     "image": "images/books/book23.jpg",
     "category": "Nonfiction"
   },
@@ -249,7 +249,7 @@ const nonfiction = [
     "title": "Entangled Life",
     "author": "Merlin Sheldrake",
     "about": "A deep dive into the world of fungi and their influence on our planet. Sheldrake explores the intricate networks that fungi create, from underground mycelial webs to symbiotic relationships with plants. The book reveals how fungi shape ecosystems, drive evolution, and challenge our understanding of life itself, blending science with philosophical insights.",
-    "price": 699,
+    "price": "699",
     "image": "images/books/book24.jpg",
     "category": "Nonfiction"
   },
@@ -257,13 +257,13 @@ const nonfiction = [
     "title": "Atlas of the Heart",
     "author": "Brené Brown",
     "about": "An exploration of human emotions and meaningful connections. Brown maps out the vast landscape of human emotions, providing language and tools to better understand ourselves and our relationships. Through research and storytelling, she offers insights into vulnerability, courage, and the ways we can cultivate deeper emotional connections with those around us.",
-    "price": 799,
+    "price": "799",
     "image": "images/books/book25.jpeg",
     "category": "Nonfiction"
   },
 ];
 
-
+const body = document.body;
 const catagories = [fiction, nonfiction, science, horror, fantasy];
 const fictionContainer = document.getElementById('fiction');
 const nonfictionContainer = document.getElementById('nonfiction');
@@ -349,6 +349,7 @@ window.addEventListener("scroll", function () {
 });
 
 //Adding books
+let i = 0;
 function AddBook(catagory, Container) {
   catagory.forEach(book => {
     Container.innerHTML += `
@@ -364,12 +365,13 @@ function AddBook(catagory, Container) {
           <h3>${book.title}</h3>
           <p>-${book.author}</p>
           <div class="buttons">
-              <button>Details</button>
+              <button class="details" id="${i}">Details</button>
               <button>Buy</button>
           </div>
       </div>
       </div>
     `;
+    i++;
   });
   catagory.forEach(book => {
     Container.innerHTML += `
@@ -385,15 +387,56 @@ function AddBook(catagory, Container) {
           <h3>${book.title}</h3>
           <p>-${book.author}</p>
           <div class="buttons">
-              <button>Details</button>
+              <button class="details" id="${i}">Details</button>
               <button>Buy</button>
           </div>
       </div>
       </div>
     `;
+    i++;
   });
 };
 
 for (let i = 0; i < catagories.length; i++) {
   AddBook(catagories[i], categoryContainer[i]);
 }
+
+function add_read_more() {
+  const read_more_btn = document.getElementsByClassName('details');
+  for (let i = 0; i < read_more_btn.length; i++) {
+    const element = read_more_btn[i];
+    element.addEventListener('click',()=>{
+      let book = books[element.id];
+      console.log(book) 
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+
+      modal.innerHTML = `
+          <div class="modal-content">
+                <div class="modal-book-image">
+                    <img src="${book.image}" alt="">
+                </div>
+                <div class="modal-desc">
+                    <h2 class="modal-title">${book.title}</h2>
+                    <h4 class="modal-author">${book.author}</h4>
+                    <p class="modal-book-desc">${book.about}</p>
+                </div>
+                <div class="close-modal">
+                    <span onclick="closeModal()">&times;</span>
+                </div>
+            </div>
+          `;
+
+      body.append(modal);
+      modal.style.display = 'flex';
+    })
+  }
+};
+
+function closeModal() {
+  const modal = document.querySelector('.modal');
+  modal.style.display = 'none';
+  modal.remove()
+}
+
+add_read_more()
