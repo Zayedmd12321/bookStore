@@ -1,166 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>PageNest</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav id="navbar">
-            <div id="logo" class="fade-in">
-                <img src="images/logo.png" alt="logo">
-                <a href="index.html"><span>PageNest</span></a>
-            </div>
+      <nav id="navbar">
+        <div id="logo" class="fade-in">
+          <img src="images/logo.png" alt="logo" />
+          <a href="index.html"><span>PageNest</span></a>
+        </div>
 
-            <div id="link">
-                <ul class="nav">
-                    <li class="item fade-in">
-                        <div class="home">
-                            <i class="fa fa-home"></i>
-                            <a href="index.html"> Home </a>
-                        </div>
-                    </li>
-                    <li class="item dropdown fade-in">
-                        <div class="Categories">
-                            <a id="Categories">Categories</a>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                                fill="#fff">
-                                <path d="M480-360 280-560h400L480-360Z" />
-                            </svg>
-                        </div>
-                        <ul class="dropdown-menu">
-                            <li><a href="#cards-section" id="Fiction" class="categories"
-                                    onclick="hamberger()">Fiction</a></li>
-                            <li><a href="#cards-section" id="Non-Fiction" class="categories"
-                                    onclick="hamberger()">Non-Fiction</a></li>
-                            <li><a href="#cards-section" id="Science" class="categories"
-                                    onclick="hamberger()">Science</a></li>
-                            <li><a href="#cards-section" id="Horror" class="categories" onclick="hamberger()">Horror</a>
-                            </li>
-                            <li><a href="#cards-section" id="Fantasy" class="categories"
-                                    onclick="hamberger()">Fantasy</a></li>
-                        </ul>
-                    </li>
-                    <li class="item fade-in">
-                        <div class="about ">
-                            <i class="fa fa-info-circle"></i>
-                            <a href="#footer-about" onclick="hamberger()">About</a>
-                        </div>
-                    </li>
+        <div id="link">
+          <ul class="nav">
+            <li class="item fade-in">
+              <div class="home">
+                <i class="fa fa-home"></i>
+                <a href="index.html"> Home </a>
+              </div>
+            </li>
 
-                    <li class="item fade-in">
-                        <div class="contact">
-                            <i class="fa fa-phone "></i>
-                            <a href="#footer-contact" onclick="hamberger()">Contact</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <li class="item fade-in">
+              <input type="text" class="search" placeholder="Search..." />
+            </li>
+            <li class="item dropdown fade-in">
+              <div class="Categories">
+                <a id="Categories">Categories</a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#fff"
+                >
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
+              </div>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    href="#cards-section"
+                    id="Fiction"
+                    class="categories"
+                    onclick="hamberger()"
+                    >Fiction</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#cards-section"
+                    id="Non-Fiction"
+                    class="categories"
+                    onclick="hamberger()"
+                    >Non-Fiction</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#cards-section"
+                    id="Science"
+                    class="categories"
+                    onclick="hamberger()"
+                    >Science</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#cards-section"
+                    id="Horror"
+                    class="categories"
+                    onclick="hamberger()"
+                    >Horror</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#cards-section"
+                    id="Fantasy"
+                    class="categories"
+                    onclick="hamberger()"
+                    >Fantasy</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="item fade-in">
+              <div class="about">
+                <i class="fa fa-info-circle"></i>
+                <a href="#footer-about" onclick="hamberger()">About</a>
+              </div>
+            </li>
+          </ul>
+        </div>
 
-            <div id="accnt">
-                <a href="" class="fade-in"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                        viewBox="0 -960 960 960" width="24px" fill="#fff">
-                        <path
-                            d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
-                    </svg></a>
-                <a href="" class="fade-in"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                        viewBox="0 -960 960 960" width="24px" fill="#fff">
-                        <path
-                            d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
-                    </svg></a>
-                <a href="javascript:void(0);" class="bars fade-in" onclick="hamberger()">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <a href="javascript:void(0);" class="close fade-in" onclick="hamberger()">
-                    <i class="fa fa-close"></i>
-                </a>
-            </div>
-
-        </nav>
+        <div id="accnt">
+          <a href="" class="fade-in"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#fff"
+            >
+              <path
+                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"
+              /></svg
+          ></a>
+          <a href="" class="fade-in"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#fff"
+            >
+              <path
+                d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z"
+              /></svg
+          ></a>
+          <a
+            href="javascript:void(0);"
+            class="bars fade-in"
+            onclick="hamberger()"
+          >
+            <i class="fa fa-bars"></i>
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="close fade-in"
+            onclick="hamberger()"
+          >
+            <i class="fa fa-close"></i>
+          </a>
+        </div>
+      </nav>
     </header>
 
-
     <div class="welcome">
-        <img src="images/logo.png" alt="">
-        <div class="text">
-            <h1>Welcome to <span id="type-writer"></span></h1>
-            <h2>-Your Gateway to Infinite Stories!</h2>
-        </div>
+      <img src="images/logo.png" alt="" />
+      <div class="text">
+        <h1>Welcome to <span id="type-writer"></span></h1>
+        <h2>-Your Gateway to Infinite Stories!</h2>
+      </div>
     </div>
+    <div class="bookS">
     <div class="Container" id="fiction-box">
-        <h1 style="margin: 5px 20px;">Fiction</h1>
-        <div class="book-section" id="fiction"></div>
+      <h1 style="margin: 5px 20px">Fiction</h1>
+      <div class="book-section" id="fiction"></div>
     </div>
     <div class="Container" id="non-fiction-box">
-        <h1 style="margin: 5px 20px;">Non-Fiction</h1>
-        <div class="book-section" id="nonfiction"></div>
+      <h1 style="margin: 5px 20px">Non-Fiction</h1>
+      <div class="book-section" id="nonfiction"></div>
     </div>
     <div class="Container" id="science-box">
-        <h1 style="margin: 5px 20px;">Science</h1>
-        <div class="book-section" id="science"></div>
+      <h1 style="margin: 5px 20px">Science</h1>
+      <div class="book-section" id="science"></div>
     </div>
     <div class="Container" id="horror-box">
-        <h1 style="margin: 5px 20px;">Horror</h1>
-        <div class="book-section" id="horror"></div>
+      <h1 style="margin: 5px 20px">Horror</h1>
+      <div class="book-section" id="horror"></div>
     </div>
     <div class="Container" id="fantasy-box">
-        <h1 style="margin: 5px 20px;">Fantasy</h1>
-        <div class="book-section" id="fantasy"></div>
+      <h1 style="margin: 5px 20px">Fantasy</h1>
+      <div class="book-section" id="fantasy"></div>
     </div>
-    
+    </div>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section" id="footer-about">
-                <h3>About PageNest</h3>
-                <p>PageNest is your one-stop destination for all your reading needs. Explore a wide range of books and
-                    immerse yourself in the world of knowledge and stories.</p>
-            </div>
-
-            <div class="footer-section" id="footer-quick-link">
-                <h3>Quick Links</h3>
-                <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#footer-about">About Us</a></li>
-                    <li><a href="#footer-contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section" id="footer-contact">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>Email: <a href="mailto:PageNest@gmail.com">PageNest@gmail.com</a></li>
-                    <li>Phone: +91 7735773221</li>
-                    <li>Address: IIT Kharagpur, West Bengal, India</li>
-                </ul>
-            </div>
-
-            <div class="footer-section" id="footer-follow">
-                <h3>Follow Us</h3>
-                <div class="social-media">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-section" id="footer-about">
+          <h3>About PageNest</h3>
+          <p>
+            PageNest is your one-stop destination for all your reading needs.
+            Explore a wide range of books and immerse yourself in the world of
+            knowledge and stories.
+          </p>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 PageNest. All rights reserved.</p>
+        <div class="footer-section" id="footer-quick-link">
+          <h3>Quick Links</h3>
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#footer-about">About Us</a></li>
+            <li><a href="#footer-contact">Contact</a></li>
+          </ul>
         </div>
+
+        <div class="footer-section" id="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              Email: <a href="mailto:PageNest@gmail.com">PageNest@gmail.com</a>
+            </li>
+            <li>Phone: +91 7735773221</li>
+            <li>Address: IIT Kharagpur, West Bengal, India</li>
+          </ul>
+        </div>
+
+        <div class="footer-section" id="footer-follow">
+          <h3>Follow Us</h3>
+          <div class="social-media">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 PageNest. All rights reserved.</p>
+      </div>
     </footer>
     <script src="book.js"></script>
     <script src="home.js"></script>
     <script src="nishita.js"></script>
     <script src="rupya.js"></script>
     <script src="ved.js"></script>
-</body>
-
+  </body>
 </html>
