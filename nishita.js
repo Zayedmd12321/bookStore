@@ -1,18 +1,30 @@
+<<<<<<< HEAD
 const book_search = document.querySelector(".search");
 let bookContainer = document.querySelector(".bookS");
 
 book_search.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         let bookName = book_search.value.trim().toLowerCase();
+=======
+const search = document.querySelector(".search");
+const bookContainer = document.querySelector(".bookS");
+
+// Assuming `books` is defined somewhere, like:
+
+
+search.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        let bookName = search.value.trim().toLowerCase();
+>>>>>>> ddd4c26f901c154563bbed04915f7c5e34c8ecff
         bookContainer.innerHTML = "";
         console.log(bookName);
 
         function SearchBook() {
             let found = false;
             books.forEach(book => {
-                if (book.title.toLowerCase() === bookName) {
+                if (book.title.toLowerCase() == bookName) {
                     found = true;
-                    bookContainer.innerHTML = `
+                    bookContainer.innerHTML += `
                     <div class="bookCard">
                         
                         <div class="overlay">
@@ -42,4 +54,11 @@ book_search.addEventListener('keydown', function (event) {
         SearchBook();
         
     }
+<<<<<<< HEAD
 });
+=======
+});
+
+add_read_more();
+RemoveBooks();
+>>>>>>> ddd4c26f901c154563bbed04915f7c5e34c8ecff
