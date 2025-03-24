@@ -248,6 +248,7 @@ input:focus {
     align-items: center;
     text-align: center;
     color: #fff;
+    opacity: 0;
 }
 
 #type-writer::after {
