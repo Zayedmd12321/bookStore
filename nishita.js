@@ -1,21 +1,21 @@
-const book = document.querySelector(".search");
+const search = document.querySelector(".search");
 const bookContainer = document.querySelector(".bookS");
 
 // Assuming `books` is defined somewhere, like:
 
 
-book.addEventListener('keydown', function (event) {
+search.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-        let bookName = book.value.trim().toLowerCase();
+        let bookName = search.value.trim().toLowerCase();
         bookContainer.innerHTML = "";
 
         function SearchBook() {
             let found = false;
 
             books.forEach(book => {
-                if (book.title.toLowerCase() === bookName) {
+                if (book.title.toLowerCase() == bookName) {
                     found = true;
-                    bookContainer.innerHTML = `
+                    bookContainer.innerHTML += `
                     <div class="bookCard">
                         <img src="${book.image}" alt="">
                         <div class="overlay">
@@ -45,3 +45,6 @@ book.addEventListener('keydown', function (event) {
         SearchBook();
     }
 });
+
+add_read_more();
+RemoveBooks();
