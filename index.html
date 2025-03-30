@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>PageNest</title>
@@ -19,7 +20,12 @@
 
             <div id="link">
                 <ul class="nav">
-                    <li class="item fade-in"><a href="index.html">Home</a></li>
+                    <li class="item fade-in">
+                        <div class="home">
+                            <i class="fa fa-home"></i>
+                            <a href="index.html"> Home </a>
+                        </div>
+                    </li>
                     <li class="item dropdown fade-in">
                         <div class="Categories">
                             <a id="Categories">Categories</a>
@@ -41,8 +47,19 @@
                                     onclick="hamberger()">Fantasy</a></li>
                         </ul>
                     </li>
-                    <li class="item fade-in"><a href="#footer-about" onclick="hamberger()">About</a></li>
-                    <li class="item fade-in"><a href="#footer-contact" onclick="hamberger()">Contact</a></li>
+                    <li class="item fade-in">
+                        <div class="about ">
+                            <i class="fa fa-info-circle"></i>
+                            <a href="#footer-about" onclick="hamberger()">About</a>
+                        </div>
+                    </li>
+
+                    <li class="item fade-in">
+                        <div class="contact">
+                            <i class="fa fa-phone "></i>
+                            <a href="#footer-contact" onclick="hamberger()">Contact</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
@@ -68,17 +85,35 @@
         </nav>
     </header>
 
+
     <div class="welcome">
-        <h1>This is the para</h1>
+        <img src="images/logo.png" alt="">
+        <div class="text">
+            <h1>Welcome to <span id="type-writer"></span></h1>
+            <h2>-Your Gateway to Infinite Stories!</h2>
+        </div>
     </div>
-    <div class="mystery">
-        <div class="bookCard" id="book1"></div>
-        <div class="bookCard" id="book2"></div>
-        <div class="bookCard" id="book3"></div>
-        <div class="bookCard" id="book4"></div>
+    <div class="Container" id="fiction-box">
+        <h1 style="margin: 5px 20px;">Fiction</h1>
+        <div class="book-section" id="fiction"></div>
     </div>
-    <div class="fiction"></div>
-    <div class="romance"></div>
+    <div class="Container" id="non-fiction-box">
+        <h1 style="margin: 5px 20px;">Non-Fiction</h1>
+        <div class="book-section" id="nonfiction"></div>
+    </div>
+    <div class="Container" id="science-box">
+        <h1 style="margin: 5px 20px;">Science</h1>
+        <div class="book-section" id="science"></div>
+    </div>
+    <div class="Container" id="horror-box">
+        <h1 style="margin: 5px 20px;">Horror</h1>
+        <div class="book-section" id="horror"></div>
+    </div>
+    <div class="Container" id="fantasy-box">
+        <h1 style="margin: 5px 20px;">Fantasy</h1>
+        <div class="book-section" id="fantasy"></div>
+    </div>
+    
 
     <footer class="footer">
         <div class="footer-container">
@@ -121,7 +156,11 @@
             <p>&copy; 2025 PageNest. All rights reserved.</p>
         </div>
     </footer>
+    <script src="book.js"></script>
     <script src="home.js"></script>
+    <script src="nishita.js"></script>
+    <script src="rupya.js"></script>
+    <script src="ved.js"></script>
 </body>
 
 </html>

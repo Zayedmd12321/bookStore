@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
@@ -17,12 +21,26 @@ header {
     left: 0;
 }
 
+.home,
+.contact,
+.about {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+}
+
 /* Designing Nav Bar */
 #navbar {
     display: flex;
     height: 100%;
     top: 0;
     backdrop-filter: blur(2px);
+    transition: all 0.3s ease-in-out;
 }
 
 /* Inserting a background using ::before  */
@@ -46,13 +64,14 @@ header {
 }
 
 #logo img {
-    height: 76px;
-    width: 87px;
+    height: 59px;
+    width: 75px;
     margin: 5px 0px;
     margin-right: 12px;
 }
 
 #logo span {
+    font-size: 1.1rem;
     color: #fff;
     font-weight: 600;
 }
@@ -79,6 +98,10 @@ header {
     transform: translateY(-10px);
 }
 
+#accnt svg {
+    transition: all 0.2s ease-in-out;
+}
+
 #accnt svg:hover {
     transform: scale(1.4);
 }
@@ -90,7 +113,8 @@ header {
     justify-content: center;
 }
 
-.bars,.close{
+.bars,
+.close {
     display: none;
 }
 
@@ -110,7 +134,7 @@ header {
     padding: 10px 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     min-width: 180px;
-    
+
 }
 
 .dropdown-menu li {
@@ -133,6 +157,7 @@ header {
     list-style: none;
     opacity: 0;
     transform: translateY(-10px);
+    cursor: pointer;
 }
 
 .item a {
@@ -141,7 +166,7 @@ header {
     font-size: 1.1rem;
     border-radius: 20px;
     display: inline-block;
-    margin: 0px 25px;
+    margin: 0px 25px 0 5px;
     font-weight: 600;
     position: relative;
 }
@@ -179,7 +204,8 @@ header {
         opacity: 0;
         transform: translateY(-10px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -193,7 +219,7 @@ header {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),center, url("images/background.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), center, url("images/background.jpg") no-repeat;
     background-size: 100% 100%;
     display: flex;
     flex-direction: column;
@@ -201,9 +227,27 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: #fff;
 }
 
-.mystery {
+#type-writer::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+.welcome img {
+    width: 300px;
+    margin: 5px;
+}
+
+/* .mystery {
     width: 100%;
     height: 300px;
     background-color: rgb(144, 251, 251);
@@ -211,17 +255,37 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+    padding-right: 18px;
+
 
     grid-template-areas: 'book1' 'book2' 'book3' 'book4';
     gap: 2px;
+
+
+
 }
 
 .bookCard {
     height: 100%;
     width: 100%;
-    background-color: black;
-
     grid-area: 'book1';
+    z-index: 50;
+    position: relative;
+    top: 600px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: rgb(231, 222, 222);
+    margin-left: 10px;
+
+
+
+}
+
+.bookCard:hover {
+    transform: scale(1.03);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
 #book1 {
@@ -243,13 +307,126 @@ header {
 .fiction {
     width: 100%;
     height: 300px;
-    background-color: rgb(98, 249, 249);
+    background-color: rgb(109, 81, 81);
 }
 
 .romance {
     width: 100%;
     height: 300px;
-    background-color: rgb(59, 247, 247);
+    background-color: rgb(109, 81, 81);
+} */
+
+.Container {
+    margin: 20px;
+}
+
+.book-section {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.book-section::-webkit-scrollbar{
+    display: none;
+}
+
+#fiction-box {
+    margin-top: 90vh;
+}
+
+.bookCard {
+    margin: 5px 20px;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    min-width: 120px;
+    height: 160px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.bookCard img {
+    /* filter: contrast(1.2); */
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay (Hidden by Default) */
+.bookCard .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Expand Width on Hover */
+.bookCard:hover {
+    transition: all 0.3s ease-in-out;
+    min-width: 250px;
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3), 
+    0px 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.bookCard:hover .overlay {
+    display: flex;
+}
+
+/* Title & Author */
+.bookCard .overlay h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bookCard .overlay p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.bookCard .buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.bookCard .buttons button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.bookCard .buttons button:hover {
+    background: gray;
+    color: white;
+}
+
+.bookmark {
+    position: absolute;
+    top: 4px;
+    right: 4px;
 }
 
 /* footer  */
@@ -314,4 +491,86 @@ header {
     padding-top: 1rem;
     text-align: center;
     font-size: 0.875rem;
+}
+
+/* modal design */
+.modal {
+    font-family: sans-serif;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #f0f8ff;
+    margin-top: 3rem;
+    display: flex;
+    border-radius: 10px;
+    width: 43rem;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    height: 23rem;
+    border: 2px solid grey;
+    overflow-y: scroll;
+}
+
+.modal-content::-webkit-scrollbar{
+    display: none;
+}
+
+.modal-book-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    /* border-right: 2px solid grey; */
+}
+
+.modal-book-image img {
+    width: 11rem;
+    height: 17rem;
+    filter: contrast(1.55);
+    padding-left: 8px;
+}
+
+.modal-desc {
+    flex: 2;
+    text-align: left;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -0.2rem;
+    right: 0.3rem
+}
+
+.close-modal span:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.modal-title {
+    margin: 2.2rem 0rem 0.03rem 1rem;
+}
+
+.modal-author {
+    margin: 2.2px 0rem 1.5rem 1rem;
+    color: #555;
+}
+
+.modal-book-desc {
+    line-height: 1.2;
+    margin-left: 1rem;
 }
